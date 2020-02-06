@@ -272,7 +272,8 @@ const cakePrompts = {
 
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Create a new array
+    // Create a unique list of toppings
   },
 
   groceryList() {
@@ -309,7 +310,9 @@ const cakePrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Create a unique list of allToppings
+    // Concatenate all of the element's toppings into a list of all toppings, including duplicates
+    // Reduce the unique toppings list into an object that has the topping name as the key and the number of total toppings as the length
   }
 };
 
