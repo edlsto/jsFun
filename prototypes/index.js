@@ -31,7 +31,7 @@ const kittyPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Filter the kitties for the color orange, then map over the array with their names only.
   },
 
   sortByAge() {
@@ -41,7 +41,7 @@ const kittyPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Sort the kitties by age using sort function with a callback comparing ages.
   },
 
   growUp() {
@@ -60,6 +60,9 @@ const kittyPrompts = {
 
     kitties.forEach(el => el.age += 2)
     return kitties;
+
+    // Annotation:
+    // Iterate over the array and change the age.
   }
 };
 
@@ -114,7 +117,10 @@ const clubPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Create an array of unique people
+    // Create an empty objects with a key for each person.
+    // If the person is in a club, add the values
+
   }
 };
 
@@ -156,7 +162,7 @@ const modPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Map over the array and create keys and values for each mod
   }
 };
 
@@ -197,7 +203,7 @@ const cakePrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Map over the array and create an object for each element. Use the properties in the original array of objects to create the values.
   },
 
   onlyInStock() {
@@ -229,7 +235,7 @@ const cakePrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Filter the array for cakes that have nothing in stock.
   },
 
   totalInventory() {
@@ -245,7 +251,7 @@ const cakePrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Reduce all the inStock values to a total number.
   },
 
   allToppings() {
