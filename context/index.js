@@ -20,7 +20,7 @@ const context = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // const fly is using an arrow function, so 'this' is on the global window object.
   },
 
   exerciseB() {
@@ -34,7 +34,7 @@ const context = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // fn is not a method or a class, so "this" is on the global window object.
   },
 
   exerciseC() {
@@ -48,7 +48,7 @@ const context = {
     const el = document.getElementById('btn');
     el.addEventListener('click', car.getInfo);
 
-    // What is the value of `this` when a user clicks on our element and car.getInfo() is triggered?
+    // getInfo is called as a method on an instance of an object, so 'this' is equal to the instance of the object
     const result = 'el';
     return result;
 
@@ -72,11 +72,11 @@ const context = {
     var breed = dog.getBreed();
 
     // What is the value of `this` when we call breed()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'global window object';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // this is not in a method; it is in a function inside of a method. Therefore, it is the global window object.
   },
 
   exerciseE() {
@@ -88,11 +88,11 @@ const context = {
 
 
     // What is the value of `this` when we call fn()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'global window object';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // fn is a function, not a method or a class. Therefore 'this' is on the global window object.
   },
 
   exerciseF() {
@@ -111,11 +111,11 @@ const context = {
     const storm = new Hero('Ororo', 'weather control', true);
 
     // What is the value of `this` when we call storm.identifyHero()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'instance of Hero';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // this is called within a method on a class, so this is equal to an instance of the class.
   },
 
   exerciseG() {
@@ -139,11 +139,11 @@ const context = {
 
 
     // What is the value of `this` when we call monopoly.restart()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'global window object';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // This is called within a function within a method, so it is equal to the global window object.
   },
 
   exerciseH() {
@@ -159,11 +159,11 @@ const context = {
     obj.method();
 
     // What is the value of `this` when we call obj.arrowFunction()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'obj';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // this is within a method, so this is equal to the object.
   },
 
   exerciseI() {
@@ -182,11 +182,11 @@ const context = {
     }, poets);
 
     // What is the value of `this` that gets returned on each iteration of poets.map()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'poets';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment. Annotation should include explanation regarding the second argument of `poets` that is being passed
+    // This is within the method map, so this is equal to the object.
   },
 
   exerciseJ() {
@@ -196,11 +196,11 @@ const context = {
     });
 
     // What is the value of `this` when a user clicks on our #btn element and the callback is triggered?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'el';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment.
+    // This is within a method, so this is equal to the object (left of the dot)
   },
 
   exerciseK() {
@@ -212,11 +212,11 @@ const context = {
     };
 
     // What is the value of `this` when we call store.sellMe()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'store';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment.
+    // this is within a method, so this is equal to the object (left of dot)
   },
 
   exerciseL() {
@@ -232,11 +232,11 @@ const context = {
     };
 
     // What is the value of `this` when we call dog.getBreed()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'dog';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // this is used in a method, so "this" is equal to dog (left of dot)
   },
 
   exerciseM() {
@@ -255,11 +255,11 @@ const context = {
     }
 
     // What is the value of `this` when we call makeBirdNoise.call(robert);
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'robert';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // The .call method calls the function with a specified 'this' value. In this case, 'robert' is specified as the value of 'this.'
   },
 
   exerciseN() {
@@ -281,11 +281,11 @@ const context = {
     var firstBird = new Bird('Calvin', 'budgie');
 
     // What is the value of `this` when we call firstBird.delayNoise();
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'instance of Bird';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    //The .bind method sets this to a specific value. In this case, it sets this to the this value of .makeNoise, which is the instance of bird.
   },
 
   exerciseO() {
@@ -297,7 +297,7 @@ const context = {
     });
 
     // What is the value of `this` when a user clicks on our button element and the callback is triggered?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'button';
     return result;
 
     // Annotation:
@@ -312,7 +312,7 @@ const context = {
       }
     };
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'global window object';
     return result;
 
     // What is the value of `this` when we call child.scream();
