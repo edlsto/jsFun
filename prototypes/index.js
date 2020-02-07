@@ -348,7 +348,7 @@ const classPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Filter for object that have the value of 'FE' in the 'program' key
   },
 
   totalCapacities() {
@@ -387,7 +387,7 @@ const classPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Use the sort method to sort in place by the capacity property
   }
 };
 
@@ -415,7 +415,7 @@ const bookPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Filter for elements whose genre property does not include horror or true crime. Then map for just the names.
 
   },
   getNewBooks() {
@@ -436,7 +436,7 @@ const bookPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // For each element, create an object with title and year keys. Assign the respective values from the object to those keys.
   }
 
 };
@@ -462,7 +462,7 @@ const weatherPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Use the map method, and for each element, get the high and low, then average them.
   },
 
   findSunnySpots() {
@@ -478,7 +478,7 @@ const weatherPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Use filter to transform each element to the requested string, using the location and type properties.
   },
 
   findHighestHumidity() {
@@ -496,7 +496,7 @@ const weatherPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Sort from highest to lowest humidity, then return the first element in the array
 
   }
 };
@@ -526,7 +526,7 @@ const nationalParksPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Create a new object with the requested keys. For each value, run a filter getting the visited for not visited parks. Chain on a map for .name to get just the name
   },
 
   getParkInEachState() {
@@ -548,7 +548,7 @@ const nationalParksPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Use map to transform each element into an object. Use bracket notation to dynamically set key names on the new object.
   },
 
   getParkActivities() {
@@ -580,7 +580,7 @@ const nationalParksPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Create an empty array. Loop through data array, then through each activity. If the activity is not in the newly created array, push it in. Then return the newly created array.
   }
 };
 
@@ -611,7 +611,7 @@ const breweryPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Use .reduce to sum up all of the beers.length values
   },
 
   getBreweryBeerCount() {
@@ -633,7 +633,7 @@ const breweryPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Map each element of the array to a new object literal using the requested key names and the respective values from the data object.
   },
 
   findHighestAbvBeer() {
@@ -652,7 +652,7 @@ const breweryPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Create a new array that contains all of the beers. Then sort by abv. Return the first element.
   }
 };
 
@@ -706,7 +706,7 @@ const turingPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // For each element, create a new object literal with the requested key names. For Name, assign the name. for student count, use .find to find their cohort, then use the length property to find how many students are in it.
   },
 
   studentsPerInstructor() {
@@ -757,7 +757,7 @@ const turingPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Use .reduce to creat an object whose keys are the instructor names. For each instructor, loop through the curriculum. If the instructor teaches the subject, and the subject is not already in their array, push the subject into the array.
   },
 
   curriculumPerTeacher() {
@@ -793,7 +793,7 @@ const turingPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Create a new array. Loopping through the curriculum lists and create a list of unique curriculums. Then iterate over that array using .reduce to create an object. Each key is equal to a different curriculum name, with an empty array. Then iterate through the instructors. If they teach the curriculum name, push the instructor's name into the array.
   }
 };
 
@@ -838,7 +838,7 @@ const bossPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Iterate over the Object.values of the object using the .map method. Create a new object literal for each element. Assign key of bossName to the name. create a skidekickLoyalty key that iterates over the sidekicks, finds the once that correlate to the respective boss, then use .reduce to sum the loyalty scores of all the sidekicks.
   }
 };
 
@@ -889,7 +889,7 @@ const astronomyPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Create a new array. Iterate over the stars. For each star, iterate over the values within each constellation object. If the constellation includes the star, push the star into the new array.
   },
 
   starsByColor() {
@@ -917,7 +917,7 @@ const astronomyPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Create a new array. Iterate over the stars array, and create an array of all of the unique colors. Then use .reduce to create a new object whose keys are all of the unique colors. For the values, filter the stars array to only include elements whose color property corresponds to the key.
   },
 
   constellationsStarsExistIn() {
@@ -940,12 +940,12 @@ const astronomyPrompts = {
         constellations.push(star.constellation)
       }
     })
-    constellations.splice(5, 0, ...constellations.splice(3, 1))
+    constellations.splice(5, 0, constellations.splice(3, 1)[0])
     const result = constellations;
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Create a new array. Iterate over the stars, and create an array of constellations.
   }
 };
 
@@ -991,7 +991,7 @@ const ultimaPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Iterate over the array and get an array of arrays of weapons using .map. Then use .map on the weapons elements, and within each weapons array, .map the element to the respective score within the weapons object. Then use .reduce to sum each of the character's weapon scores. then use .reduce again to sum all of the characters' scores.
   },
 
   charactersByTotal() {
@@ -1018,7 +1018,7 @@ const ultimaPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Map over the characters array. For each character, create a new empty array. add a key of the character name to each new object. To each key, assign a value of another object, whose keys are damage and range. For each of those, use .reduce, iterating over the character's weapons. to add up all of the respective scores from the weapons array.
   },
 };
 
@@ -1062,7 +1062,7 @@ const dinosaurPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Use .reduce on the movies array to create an object whose keys are the title and value is the result of a filter method on the element's dinos array, returning the length of  only the awesome dinosaurs.
   },
 
   averageAgePerMovie() {
@@ -1116,7 +1116,7 @@ const dinosaurPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Create an array of the unique director names. Use reduce, iterating over the directors array, to create a new object. For each director, create an empty object. Iterating over each movie, if the movie's director equals the director element, create a key with the name of the title, and value is the average age of the cast. Determine the average age by using .reduce, iterating over the cast. For each iteration, add the difference between the release date at the actor's birth date. The divide by the length of the cast.
   },
 
   uncastActors() {
