@@ -297,11 +297,11 @@ const context = {
     });
 
     // What is the value of `this` when a user clicks on our button element and the callback is triggered?
-    const result = 'button';
+    const result = 'global window object';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // this is within an arrow function, and since the method is called globally, this is the global window
   },
 
   exerciseP() {
@@ -317,7 +317,7 @@ const context = {
 
     // What is the value of `this` when we call child.scream();
     // Annotation:
-    // Write your annotation here as a comment
+    // this is within an arrow function, and since the method is called globally, this is the global window
   }
 };
 
