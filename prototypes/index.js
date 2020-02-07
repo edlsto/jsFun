@@ -1162,7 +1162,7 @@ const dinosaurPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Iterate over the entries of the humans object. For each person, create a new object with keys of name, nationality and imdb star rating. Assign the respective values.
   },
 
   actorsAgesInMovies() {
@@ -1181,7 +1181,6 @@ const dinosaurPrompts = {
       { name: 'Bryce Dallas Howard', ages: [ 34, 37 ] } ]
     */
     var myResult = Object.entries(humans).filter(peep => {
-      // console.log(peep[0])
       return movies.some(movie => movie.cast.some(person => person === peep[0]))
     })
 
@@ -1203,7 +1202,8 @@ const dinosaurPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // iterate over the human object's entries. Filter for the actors who appeared in at least one movie.
+    //Map over the new array. For each person, create an object with the keys of name, and ages. Then iterate over the movies. if the cast includes the person, push their age into the ages array.
   }
 };
 
